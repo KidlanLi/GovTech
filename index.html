@@ -5,26 +5,101 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Climate Conflict Game</title>
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #343a40;
+            line-height: 1.6;
+        }
+        header {
+            background: #007BFF;
+            color: white;
+            text-align: center;
+            padding: 1.5rem 0;
+        }
+        nav {
+            text-align: center;
+            margin: 1.5rem;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 0.7rem 1.5rem;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        main {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: white;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        section {
+            margin-bottom: 2.5rem;
+        }
+        h2 {
+            color: #007BFF;
+            margin-bottom: 1rem;
+        }
+        p {
+            margin-bottom: 1rem;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #343a40;
+            color: white;
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>Climate Conflict: The Game</h1>
+        <p>Explore the intersection of climate change and global conflict</p>
     </header>
     <nav>
-        <button id="start-game" onclick="window.location.href='game.html'">Game Start</button>
+        <button onclick="window.location.href='game.html'">Game Start</button>
     </nav>
     <main>
-        <section id="story-background">
-            <h2>Story Background</h2>
-            <p>Climate change is no longer a distant threat; it’s a reality that is reshaping societies worldwide. As resources dwindle and extreme weather events become frequent, communities face challenges in survival and cooperation.</p>
+        <!-- Part 1: Current World Situation -->
+        <section id="current-situation">
+            <h2>Current World Situation</h2>
+            <p>The world is witnessing unprecedented environmental challenges. Global temperatures have risen by 1.1°C since pre-industrial levels, triggering extreme weather events such as droughts, floods, and wildfires. In 2023 alone, over 20 million people were displaced due to climate-related disasters.</p>
+            <p>Regions like the Middle East and Sub-Saharan Africa are on the frontlines of this crisis, where water scarcity and agricultural failures have intensified social tensions. The melting Arctic ice has further destabilized global ecosystems, while rising sea levels threaten coastal cities around the world.</p>
+            <p>In South Asia, irregular monsoons and declining groundwater levels are pushing millions into poverty. Meanwhile, in the Amazon rainforest, deforestation rates have surged, reducing the planet's capacity to absorb carbon dioxide. The clock is ticking, and the decisions we make today will shape the future of humanity.</p>
         </section>
-        <section id="storytelling">
-            <h2>Storytelling</h2>
-            <p>Players will explore the impacts of climate change through a geospatial perspective, encountering real-world examples of conflicts exacerbated by environmental stressors.</p>
+
+        <!-- Part 2: Game Background -->
+        <section id="game-background">
+            <h2>Game Background</h2>
+            <p>In the near future, the world has become a fragile battleground where the fight for survival revolves around access to three critical resources: <strong>water</strong>, <strong>food</strong>, and <strong>shelter</strong>. Climate change has upended traditional systems of governance, and alliances are now forged in the name of resource control rather than diplomacy.</p>
+            <p>You are part of a community struggling to adapt. While global leaders debate over policies, disasters strike without warning, leaving ordinary citizens to face the brunt of these crises. As one of the key decision-makers, you will navigate through a world on the brink of collapse, balancing personal goals with collective survival.</p>
+            <p>Drawing inspiration from the legendary "Dune" universe, the game presents a scenario where every move counts. Your choices will determine whether your faction thrives, struggles, or succumbs to the pressures of an unforgiving environment. Will you be the hero who unites the world or the opportunist who secures personal gains at the expense of others?</p>
         </section>
-        <section id="game-introduction">
-            <h2>Game Introduction</h2>
-            <p>Climate Conflict is a strategy game where you manage limited resources to tackle climate disasters. Work as a team or compete to achieve your goals, while ensuring the global climate tracker doesn’t reach zero.</p>
+
+        <!-- Part 3: Game Play -->
+        <section id="gameplay">
+            <h2>Gameplay</h2>
+            <p><strong>Climate Conflict: The Game</strong> is a turn-based strategy game that combines elements of resource management, disaster response, and conflict resolution. Players assume roles with distinct abilities, working individually or collaboratively to achieve victory. However, if the global climate tracker reaches zero, all players lose.</p>
+            <p><strong>Key Features:</strong></p>
+            <ul>
+                <li><strong>Role-Based Gameplay:</strong> Choose from Politician, Scientist, Farmer, or Industrialist, each with unique skills and responsibilities.</li>
+                <li><strong>Dynamic Events:</strong> Respond to disasters like droughts, floods, and heatwaves, each affecting resources differently.</li>
+                <li><strong>Resource Management:</strong> Balance water, food, and shelter to maintain your community’s survival.</li>
+                <li><strong>Interactive Decision-Making:</strong> Negotiate with other players, make alliances, or engage in strategic betrayals.</li>
+            </ul>
+            <p><strong>Winning the Game:</strong></p>
+            <p>The first player to reach the end of the resource tracker wins, but the game introduces a cooperative twist. Players must collectively prevent the global climate tracker from reaching zero, which would result in a shared loss. Will you prioritize collective good or pursue personal glory?</p>
         </section>
     </main>
     <footer>
