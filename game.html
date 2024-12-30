@@ -3,15 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Climate Conflict Game</title>
+    <title>Game Interface</title>
     <link rel="stylesheet" href="css/style.css">
+    <script>
+        function showRules() {
+            alert(`
+                Game Rules:
+                1. Players take turns to act based on their role.
+                2. Manage your resources carefully to survive and achieve victory.
+                3. Events will dynamically affect resources and climate indicators.
+                4. The game ends when one player reaches their goal, or the climate indicator drops to 0.
+            `);
+        }
+    </script>
 </head>
 <body>
     <header>
-        <h1>Climate Conflict: The Card Game</h1>
-        <div id="game-stats">
-            <p>Climate Indicator: <span id="climate-indicator">10</span></p>
-            <p>Current Player: <span id="current-player">Politician</span></p>
+        <h1>Climate Conflict: Game Interface</h1>
+        <div id="top-buttons">
+            <button onclick="window.location.href='index.html'">Home</button>
+            <button onclick="window.location.reload()">New Game</button>
+            <button onclick="showRules()">View Rules</button>
         </div>
     </header>
     <main>
