@@ -1,8 +1,10 @@
+/* 全局样式 */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    color: #333;
 }
 
 header {
@@ -14,6 +16,7 @@ header {
 
 h1 {
     margin: 0;
+    font-size: 2rem;
 }
 
 nav {
@@ -25,30 +28,45 @@ button {
     background: #007BFF;
     color: white;
     border: none;
-    padding: 0.5rem 1rem;
+    padding: 0.7rem 1.5rem;
     cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
 }
 
 button:hover {
     background: #0056b3;
 }
 
+/* 主体内容 */
 main {
-    max-width: 800px;
+    max-width: 900px;
     margin: auto;
     padding: 2rem;
     background: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 }
 
 section {
     margin-bottom: 2rem;
 }
 
+section h2 {
+    color: #007BFF;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    line-height: 1.6;
+}
+
+/* 游戏区域样式 */
 #game-area {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
 }
 
 #player-cards, #event-cards {
@@ -60,4 +78,27 @@ section {
     justify-content: center;
     align-items: center;
     background: #e9e9e9;
+    border-radius: 5px;
+}
+
+#resources {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1rem;
+}
+
+#resources p {
+    background: #007BFF;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+footer {
+    text-align: center;
+    background: #333;
+    color: white;
+    padding: 1rem;
+    margin-top: 2rem;
+    font-size: 0.9rem;
 }

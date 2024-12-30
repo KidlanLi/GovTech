@@ -3,35 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game Interface</title>
+    <title>Climate Conflict Game</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
-        <h1>Climate Conflict: Game Interface</h1>
+        <h1>Climate Conflict: The Card Game</h1>
+        <div id="game-stats">
+            <p>Climate Indicator: <span id="climate-indicator">10</span></p>
+            <p>Current Player: <span id="current-player">Politician</span></p>
+        </div>
     </header>
     <main>
-        <section id="game-area">
-            <div id="player-area">
-                <h2>Player Zone</h2>
-                <p>Player cards and actions will appear here.</p>
-                <!-- Placeholder for player cards -->
-                <div id="player-cards">
-                    <img src="assets/images/player-placeholder.png" alt="Player Card">
-                </div>
+        <section id="event-card">
+            <h2>Current Event</h2>
+            <img id="event-image" src="assets/images/event-placeholder.png" alt="Event Card" />
+            <p id="event-description">A drought has occurred, reducing water resources.</p>
+        </section>
+        <section id="player-actions">
+            <h2>Player Actions</h2>
+            <div id="action-buttons">
+                <button onclick="rollDice()">Roll Dice</button>
+                <button onclick="takeAction()">Take Action</button>
             </div>
-            <div id="event-area">
-                <h2>Event Zone</h2>
-                <p>Game events will be displayed here.</p>
-                <!-- Placeholder for event cards -->
-                <div id="event-cards">
-                    <img src="assets/images/event-placeholder.png" alt="Event Card">
-                </div>
-            </div>
-            <div id="control-area">
-                <h2>Controls</h2>
-                <button id="roll-dice">Roll Dice</button>
-                <button id="next-turn">Next Turn</button>
+        </section>
+        <section id="player-resources">
+            <h2>Your Resources</h2>
+            <div id="resources">
+                <p>Water: <span id="water">3</span></p>
+                <p>Food: <span id="food">2</span></p>
+                <p>Money: <span id="money">5</span></p>
+                <p>Infrastructure: <span id="infrastructure">1</span></p>
             </div>
         </section>
     </main>
