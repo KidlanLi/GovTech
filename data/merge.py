@@ -9,5 +9,7 @@ fatalities_data = pd.read_csv(fatalities_file, sep=';')
 merged_data = pd.merge(events_data, fatalities_data, on=['Country', 'Year'], how='outer')
 merged_data = merged_data[(merged_data['Year'] >= 2010) & (merged_data['Year'] <= 2021)]
 
+complete_countries = merged_data.groupby('Country').filter(lambda x: len(x['Year'].unique()) == 12)
+
 output_file = "data/merged_country_year_events_fatalities.csv"
-merged_data.to_csv(output_file, sep=';', index=False)
+complete_countries.to_csv(output_file, sep=';', index=False)
