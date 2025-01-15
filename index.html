@@ -34,23 +34,14 @@
             display: flex;
             justify-content: center;
             align-items: center;
-        }
-
-        .section .image-frame {
-            position: relative;
-            max-width: 90%;
-            max-height: 90%;
-            border: 10px solid white;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-            border-radius: 15px;
-            overflow: hidden;
+            flex-direction: column;
         }
 
         .section img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
+            max-width: 90%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
         }
 
         .text-box {
@@ -82,6 +73,46 @@
             opacity: 1;
             transform: translateY(0);
         }
+
+        .split-section {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            height: 100vh;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        .split-section .split {
+            flex: 1;
+            padding: 1rem;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+
+        .split-section .split h2 {
+            font-size: 1.5rem;
+            color: #007BFF;
+            margin-bottom: 0.5rem;
+        }
+
+        .split-section .split hr {
+            border: none;
+            border-top: 2px solid #ddd;
+            margin: 1rem 0;
+        }
+
+        .split-section .split img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .split-section .split.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
     </style>
 </head>
 <body>
@@ -89,7 +120,7 @@
         <h1>Title</h1>
     </header>
 
-    <div class="section" id="section1">
+    <div class="section">
         <div class="image-frame">
             <img src="assets/images/Ndgain.png" alt="CVI">
         </div>
@@ -99,19 +130,25 @@
         </div>
     </div>
 
-    <div class="section" id="section2">
-        <div class="image-frame">
-            <img src="assets/images/conflict_acled.png" alt="Conflict">
+    <div class="split-section">
+        <div class="split" id="split-left">
+            <h2>Left Title</h2>
+            <hr>
+            <p>Placeholder text for the left section. Add more detailed content here, explaining the data or images shown.</p>
+            <img src="assets/images/left-image.png" alt="Left Content">
         </div>
-        <div class="text-box" id="text2">
-            <h2>Conflict</h2>
-            <p>Placeholder text for Conflict. This is where you describe the conflict data and its relevance to the topic.</p>
+        <div class="split" id="split-right">
+            <h2>Right Title</h2>
+            <hr>
+            <p>Placeholder text for the right section. Add more detailed content here, explaining the data or images shown.</p>
+            <img src="assets/images/right-image.png" alt="Right Content">
         </div>
     </div>
 
     <script>
         const sections = document.querySelectorAll('.section');
         const textBoxes = document.querySelectorAll('.text-box');
+        const splits = document.querySelectorAll('.split');
 
         window.addEventListener('scroll', () => {
             sections.forEach((section, index) => {
@@ -122,6 +159,15 @@
                     textBox.classList.add('show');
                 } else {
                     textBox.classList.remove('show');
+                }
+            });
+
+            splits.forEach((split) => {
+                const rect = split.getBoundingClientRect();
+                if (rect.top < window.innerHeight * 0.8 && rect.bottom > window.innerHeight * 0.2) {
+                    split.classList.add('show');
+                } else {
+                    split.classList.remove('show');
                 }
             });
         });
