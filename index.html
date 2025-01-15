@@ -34,14 +34,23 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-direction: column;
+        }
+
+        .section .image-frame {
+            position: relative;
+            max-width: 90%;
+            max-height: 90%;
+            border: 10px solid white;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            border-radius: 15px;
+            overflow: hidden;
         }
 
         .section img {
-            max-width: 90%;
-            height: auto;
-            border-radius: 15px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
         }
 
         .text-box {
@@ -94,19 +103,21 @@
         .split-section .split h2 {
             font-size: 1.5rem;
             color: #007BFF;
-            margin-bottom: 0.5rem;
-        }
-
-        .split-section .split hr {
-            border: none;
-            border-top: 2px solid #ddd;
-            margin: 1rem 0;
+            margin-bottom: 1rem;
         }
 
         .split-section .split img {
             max-width: 100%;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            margin-top: 1rem;
+        }
+
+        .split-section .split hr {
+            border: none;
+            border-left: 2px solid #ddd;
+            height: 80%;
+            margin: 0 1rem;
         }
 
         .split-section .split.show {
@@ -120,6 +131,7 @@
         <h1>Title</h1>
     </header>
 
+    <!-- First Section -->
     <div class="section">
         <div class="image-frame">
             <img src="assets/images/Ndgain.png" alt="CVI">
@@ -130,16 +142,27 @@
         </div>
     </div>
 
+    <!-- Second Section -->
+    <div class="section">
+        <div class="image-frame">
+            <img src="assets/images/conflict_acled.png" alt="Conflict">
+        </div>
+        <div class="text-box" id="text2">
+            <h2>Conflict</h2>
+            <p>Placeholder text for Conflict. This is where you describe the conflict data and its relevance to the topic.</p>
+        </div>
+    </div>
+
+    <!-- Third Section -->
     <div class="split-section">
         <div class="split" id="split-left">
             <h2>Left Title</h2>
-            <hr>
             <p>Placeholder text for the left section. Add more detailed content here, explaining the data or images shown.</p>
             <img src="assets/images/left-image.png" alt="Left Content">
         </div>
+        <hr>
         <div class="split" id="split-right">
             <h2>Right Title</h2>
-            <hr>
             <p>Placeholder text for the right section. Add more detailed content here, explaining the data or images shown.</p>
             <img src="assets/images/right-image.png" alt="Right Content">
         </div>
