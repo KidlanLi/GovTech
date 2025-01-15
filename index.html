@@ -90,6 +90,18 @@
             height: 100vh;
             align-items: center;
             padding: 2rem;
+            position: relative;
+        }
+
+        .split-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 2px;
+            background: #ddd;
+            transform: translateX(-50%);
         }
 
         .split-section .split {
@@ -111,13 +123,6 @@
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
             margin-top: 1rem;
-        }
-
-        .split-section .split hr {
-            border: none;
-            border-left: 2px solid #ddd;
-            height: 80%;
-            margin: 0 1rem;
         }
 
         .split-section .split.show {
@@ -160,11 +165,24 @@
             <p>Placeholder text for the left section. Add more detailed content here, explaining the data or images shown.</p>
             <img src="assets/images/left-image.png" alt="Left Content">
         </div>
-        <hr>
         <div class="split" id="split-right">
             <h2>Right Title</h2>
             <p>Placeholder text for the right section. Add more detailed content here, explaining the data or images shown.</p>
             <img src="assets/images/right-image.png" alt="Right Content">
+        </div>
+    </div>
+
+    <!-- Fourth Section -->
+    <div class="split-section">
+        <div class="split" id="split-left-2">
+            <h2>Left Title 2</h2>
+            <p>Placeholder text for the left section in the fourth page. Add more details here about the data or visuals presented.</p>
+            <img src="assets/images/left-image-2.png" alt="Left Content 2">
+        </div>
+        <div class="split" id="split-right-2">
+            <h2>Right Title 2</h2>
+            <p>Placeholder text for the right section in the fourth page. Add more details here about the data or visuals presented.</p>
+            <img src="assets/images/right-image-2.png" alt="Right Content 2">
         </div>
     </div>
 
