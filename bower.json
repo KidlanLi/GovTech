@@ -1,0 +1,30 @@
+{
+  "name": "Scrollum",
+  "description": "jQuery Parallax Scrolling Plugin",
+  "authors": [
+    "Devpri <contact@devpri.com>"
+  ],
+  "main": "src/jquery.scrollum.js",
+  "homepage": "https://www.devpri.com",
+  "keywords": [
+    "parallax",
+    "scrolling",
+    "parallax",
+    "animations",
+    "jquery",
+    "parallax",
+    "devpri"
+  ],
+  "license": "GPL 2 or later.",
+  "ignore": [
+    "**/.*",
+    "*.json",
+    "*.gemspec",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "examples"
+  ],
+  "moduleType": []
+}
