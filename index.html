@@ -53,11 +53,6 @@
             display: block;
         }
 
-        .section#conflict .image-frame {
-            max-width: 120%; /* Increased to 120% */
-            max-height: 120%;
-        }
-
         .text-box {
             position: absolute;
             bottom: 5%;
@@ -91,8 +86,8 @@
         .split-section {
             display: flex;
             flex-direction: row;
-            width: 100%;
-            height: 100vh;
+            width: 120%;
+            height: 120vh;
             align-items: center;
             padding: 2rem;
             position: relative;
@@ -105,7 +100,7 @@
             bottom: 0;
             left: 50%;
             width: 2px;
-            background: linear-gradient(to top, #ddd 40%, transparent 50%, #ddd 60%);
+            background: #ddd;
             transform: translateX(-50%);
         }
 
@@ -153,7 +148,7 @@
     </div>
 
     <!-- Second Section -->
-    <div class="section" id="conflict">
+    <div class="section">
         <div class="image-frame">
             <img src="assets/images/conflict_acled.png" alt="Conflict">
         </div>
