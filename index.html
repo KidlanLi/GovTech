@@ -88,36 +88,6 @@
             object-fit: cover;
         }
 
-        .text-box {
-            position: absolute;
-            bottom: 5%;
-            left: 5%;
-            max-width: 300px;
-            background: rgba(0, 0, 0, 0.7);
-            color: white;
-            padding: 1rem;
-            border-radius: 8px;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 1s ease, transform 1s ease;
-        }
-
-        .text-box h2 {
-            margin: 0 0 0.5rem 0;
-            color: #00D1FF;
-        }
-
-        .text-box p {
-            margin: 0;
-            line-height: 1.5;
-            font-size: 0.9rem;
-        }
-
-        .text-box.show {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
         /* Map Section Specific Styles */
         .map-container {
             position: relative;
@@ -216,10 +186,6 @@
         <div class="image-frame">
             <img src="assets/images/Ndgain.png" alt="CVI">
         </div>
-        <div class="text-box" id="text1">
-            <h2>CVI</h2>
-            <p>Placeholder text for CVI. This is where you explain the significance of the CVI data represented in this image.</p>
-        </div>
     </div>
 
     <!-- Third Section: Conflict Map -->
@@ -238,7 +204,7 @@
         </div>
     </div>
 
-    <!-- Third Section -->
+    <!-- Fourth Section -->
     <div class="split-section">
         <div class="split" id="split-left">
             <h2>Left Title</h2>
@@ -252,37 +218,24 @@
         </div>
     </div>
 
-    <!-- Fourth Section -->
+    <!-- Fifth Section -->
     <div class="split-section">
         <div class="split" id="split-left-2">
             <h2>Left Title 2</h2>
-            <p>Placeholder text for the left section in the fourth page. Add more details here about the data or visuals presented.</p>
+            <p>Left side content for the fifth section goes here. Expand details as needed.</p>
             <img src="assets/images/left-image-2.png" alt="Left Content 2">
         </div>
         <div class="split" id="split-right-2">
             <h2>Right Title 2</h2>
-            <p>Placeholder text for the right section in the fourth page. Add more details here about the data or visuals presented.</p>
+            <p>Right side content for the fifth section goes here. Provide additional insights.</p>
             <img src="assets/images/right-image-2.png" alt="Right Content 2">
         </div>
     </div>
 
     <script>
-        const sections = document.querySelectorAll('.section');
-        const textBoxes = document.querySelectorAll('.text-box');
         const splits = document.querySelectorAll('.split');
 
         window.addEventListener('scroll', () => {
-            sections.forEach((section, index) => {
-                const rect = section.getBoundingClientRect();
-                const textBox = textBoxes[index];
-
-                if (rect.top < window.innerHeight * 0.8 && rect.bottom > window.innerHeight * 0.2) {
-                    textBox.classList.add('show');
-                } else {
-                    textBox.classList.remove('show');
-                }
-            });
-
             splits.forEach((split) => {
                 const rect = split.getBoundingClientRect();
                 if (rect.top < window.innerHeight * 0.8 && rect.bottom > window.innerHeight * 0.2) {
