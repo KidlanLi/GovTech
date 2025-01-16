@@ -117,14 +117,14 @@
         }
 
         /* Map Section Specific Styles */
-        .map-container {
+        .map-section {
             position: relative;
             width: 100%;
             height: 120%;
             overflow: hidden;
         }
 
-        .map-container .flourish-embed {
+        .map-container {
             width: 100%;
             height: 100%;
         }
@@ -134,14 +134,14 @@
             width: 100%;
             text-align: center;
             background: rgba(255, 255, 255, 0.9);
-            padding: 1rem 2rem;
+            padding: 2rem;
             box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
-            margin-bottom: -30px; /* Negative margin to reduce gap */
+            z-index: 10; /* Ensure it stays on top */
         }
 
         .map-title-box h2 {
             margin: 0;
-            font-size: 2rem;
+            font-size: 2.5rem;
             color: black;
         }
 
@@ -150,6 +150,11 @@
             font-size: 1rem;
             line-height: 1.5;
             color: #555;
+        }
+
+        .flourish-embed {
+            width: 100%;
+            height: 100%;
         }
 
         /* Split Section Styles */
@@ -212,7 +217,7 @@
     </div>
 
     <!-- Third Section: Conflict Map -->
-    <div class="section">
+    <div class="map-section">
         <div class="map-title-box">
             <h2>Conflict data for the year 2021</h2>
             <p>ACLED (Armed Conflict Location & Event Data) is a conflict data collection initiative. For the purpose of our project, we understand conflict as the combination of events (such as protests, attacks, bombings) and fatalities.</p>
