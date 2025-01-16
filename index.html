@@ -131,33 +131,36 @@
 
         .map-text-box {
             position: absolute;
-            top: 5%;
-            right: 5%;
-            max-width: 600px;
-            background: rgba(255, 255, 255, 0.6);
+            top: 30%; /* Adjusted for vertical centering */
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 800px;
+            background: rgba(255, 255, 255, 0.8);
             color: black;
-            padding: 1rem;
+            padding: 2rem;
             border-radius: 8px;
             opacity: 0;
-            transform: translateY(20px);
+            transform: translate(-50%, -50%) scale(0.8);
             transition: opacity 1s ease, transform 1s ease;
+            text-align: center;
+            font-size: 1.5rem; /* Increased font size */
+            line-height: 1.6;
         }
 
         .map-text-box h2 {
-            margin: 0 0 0.5rem 0;
+            margin: 0 0 1rem 0;
             color: black;
-            font-size: 2rem;
+            font-size: 2.5rem; /* Enlarged title */
         }
 
         .map-text-box p {
             margin: 0;
-            line-height: 1.5;
-            font-size: 1.2rem;
+            font-size: 1.5rem;
         }
 
         .map-text-box.show {
             opacity: 1;
-            transform: translateY(0);
+            transform: translate(-50%, -50%) scale(1);
         }
 
         /* Split Section Styles */
@@ -230,8 +233,8 @@
             </div>
         </div>
         <div class="map-text-box" id="text2">
-            <h2>Conflict data for the year 2021</h2>
-            <p> ACLED (Armed Conflict Location & Event Data) is a conflict data collection initiative. For the purpose of our project, we understand conflict as the combination of events (such as protests, attacks, bombings) and fatalities.</p>
+            <h2>Conflict data for the year 2021 </h2>
+            <p>ACLED (Armed Conflict Location & Event Data) is a conflict data collection initiative. For the purpose of our project, we understand conflict as the combination of events (such as protests, attacks, bombings) and fatalities.</p>
         </div>
     </div>
 
