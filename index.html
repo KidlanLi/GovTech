@@ -118,7 +118,6 @@
             display: block;
         }
 
-        /* Default Text Box */
         .text-box {
             position: absolute;
             bottom: 5%;
@@ -147,24 +146,6 @@
         .text-box.show {
             opacity: 1;
             transform: translateY(0);
-        }
-
-        /* Specific Styles for Map Text Box */
-        #text2 {
-            top: 5%;
-            right: 5%;
-            left: auto; /* Override default left positioning */
-            max-width: 600px;
-            background: transparent; /* Transparent background */
-            color: black; /* Black text */
-        }
-
-        #text2 h2 {
-            font-size: 2rem; /* Larger font size */
-        }
-
-        #text2 p {
-            font-size: 1.2rem; /* Larger font size */
         }
 
         .split-section {
@@ -243,16 +224,22 @@
         </div>
     </div>
 
-    <!-- Second Section -->
+    <!-- Second Section with Flourish Map -->
     <div class="section">
-        <div class="image-frame">
-            <img src="assets/images/conflict_acled.png" alt="Conflict">
+        <div class="map-container">
+            <div class="flourish-embed flourish-map" data-src="visualisation/21185716">
+                <script src="https://public.flourish.studio/resources/embed.js"></script>
+                <noscript>
+                    <img src="https://public.flourish.studio/visualisation/21185716/thumbnail" width="100%" alt="map visualization" />
+                </noscript>
+            </div>
         </div>
-        <div class="text-box" id="text2">
+        <div class="map-text-box" id="text2">
             <h2>Conflict</h2>
             <p>Placeholder text for Conflict. This is where you describe the conflict data and its relevance to the topic.</p>
         </div>
     </div>
+
 
     <!-- Third Section -->
     <div class="split-section">
@@ -311,3 +298,4 @@
     </script>
 </body>
 </html>
+
