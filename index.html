@@ -65,63 +65,12 @@
         }
 
         /* Section Styles */
-        .section {
-            position: relative;
-            height: 100vh;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: white;
-            margin-bottom: 50px; /* Added margin to increase distance */
-        }
-
-        .image-frame {
-            position: relative;
-            max-width: 90%;
-            max-height: 90%;
-            border: 10px solid white;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-            border-radius: 15px;
-            overflow: hidden;
-        }
-
-        .image-frame img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        /* Small Text Box for CVI */
-        .small-text-box {
-            position: absolute;
-            top: 5%;
-            left: 5%;
-            max-width: 200px;
-            background: rgba(255, 255, 255, 0.8);
-            color: black;
-            padding: 0.8rem;
-            border-radius: 8px;
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
-            font-size: 0.9rem;
-            line-height: 1.4;
-            text-align: left;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 1s ease, transform 1s ease;
-        }
-
-        .small-text-box.show {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Map Section Specific Styles */
         .map-section {
             position: relative;
             width: 100%;
             height: 120%;
             overflow: hidden;
+            margin-bottom: 50px;
         }
 
         .map-container {
@@ -136,7 +85,7 @@
             background: rgba(255, 255, 255, 0.9);
             padding: 2rem;
             box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
-            z-index: 10; /* Ensure it stays on top */
+            z-index: 10;
         }
 
         .map-title-box h2 {
@@ -147,9 +96,9 @@
 
         .map-title-box p {
             margin: 0.5rem 0 0;
-            font-size: 1.3rem;
-            line-height: 1.8;
-            color: #555;
+            font-size: 1.5rem;
+            line-height: 2;
+            color: #333;
         }
 
         .flourish-embed {
@@ -157,7 +106,6 @@
             height: 100%;
         }
 
-        /* Split Section Styles */
         .split-section {
             display: flex;
             flex-direction: row;
@@ -206,13 +154,20 @@
     </div>
 
     <!-- Second Section: CVI -->
-    <div class="section">
-        <div class="image-frame">
-            <img src="assets/images/Ndgain.png" alt="CVI">
+    <div class="map-section">
+        <div class="map-title-box">
+            <h2>Climate Vulnerability Index (CVI)</h2>
+            <p>
+                The Climate Vulnerability Index measures a region's ability to adapt to the effects of climate change. It considers factors such as socioeconomic status, infrastructure, and environmental conditions to assess risk levels.
+            </p>
         </div>
-        <div class="small-text-box" id="small-text-cvi">
-            <h2>CVI</h2>
-            <p>This is a small description box for CVI, providing additional information about the image.</p>
+        <div class="map-container">
+            <div class="flourish-embed flourish-map" data-src="visualisation/21185716">
+                <script src="https://public.flourish.studio/resources/embed.js"></script>
+                <noscript>
+                    <img src="https://public.flourish.studio/visualisation/21185716/thumbnail" width="100%" alt="map visualization" />
+                </noscript>
+            </div>
         </div>
     </div>
 
@@ -220,9 +175,9 @@
     <div class="map-section">
         <div class="map-title-box">
             <h2>Conflict data for the year 2021</h2>
-            <p>ACLED (Armed Conflict Location & Event Data) is a conflict data collection initiative.</p>
-            <p>For the purpose of our project, </p>
-            <p>we understand conflict as the combination of events (such as protests, attacks, bombings) and fatalities.</p>
+            <p>
+                ACLED (Armed Conflict Location & Event Data) is a conflict data collection initiative. For the purpose of our project, we understand conflict as the combination of events (such as protests, attacks, bombings) and fatalities.
+            </p>
         </div>
         <div class="map-container">
             <div class="flourish-embed flourish-map" data-src="visualisation/21187311">
@@ -245,20 +200,6 @@
             <h2>Right Title</h2>
             <p>Placeholder text for the right section. Add more detailed content here, explaining the data or images shown.</p>
             <img src="assets/images/right-image.png" alt="Right Content">
-        </div>
-    </div>
-
-    <!-- Fifth Section -->
-    <div class="split-section">
-        <div class="split" id="split-left-2">
-            <h2>Left Title 2</h2>
-            <p>Left side content for the fifth section goes here. Expand details as needed.</p>
-            <img src="assets/images/left-image-2.png" alt="Left Content 2">
-        </div>
-        <div class="split" id="split-right-2">
-            <h2>Right Title 2</h2>
-            <p>Right side content for the fifth section goes here. Provide additional insights.</p>
-            <img src="assets/images/right-image-2.png" alt="Right Content 2">
         </div>
     </div>
 
