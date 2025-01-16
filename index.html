@@ -12,56 +12,6 @@
             overflow-x: hidden;
         }
 
-        /* Fullscreen Intro Section */
-        .fullscreen-section {
-            position: relative;
-            height: 100vh;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: url('assets/images/back_draft_1.png') no-repeat center center/cover;
-            color: white;
-            text-align: center;
-        }
-
-        .fullscreen-section h1 {
-            font-size: 5rem;
-            margin: 0;
-            line-height: 1.2;
-            font-weight: bold;
-            text-transform: uppercase;
-            text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7), 0px 0px 20px rgba(255, 255, 255, 0.9);
-        }
-
-        .fullscreen-section h1 span {
-            display: block;
-            animation: fade-in 2s ease-in-out forwards;
-        }
-
-        .fullscreen-section h1 span:nth-child(1) {
-            animation-delay: 0s;
-        }
-
-        .fullscreen-section h1 span:nth-child(2) {
-            animation-delay: 0.5s;
-        }
-
-        .fullscreen-section h1 span:nth-child(3) {
-            animation-delay: 1s;
-        }
-
-        @keyframes fade-in {
-            0% {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
         .section {
             position: relative;
             height: 100vh;
@@ -101,63 +51,40 @@
             transform: translateY(0);
         }
 
-        .image-frame {
-            position: relative;
-            max-width: 90%;
-            max-height: 90%;
-            border: 10px solid white;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-            border-radius: 15px;
-            overflow: hidden;
-        }
-
-        .image-frame img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .map-frame {
+        .map-container {
             position: relative;
             width: 90%;
-            height: 90%;
+            height: 70%;
+            overflow: auto;
             border: 10px solid white;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
             border-radius: 15px;
-            overflow: hidden;
+        }
+
+        .map-container iframe {
+            width: 1200px; /* Large width to enable horizontal scrolling */
+            height: 800px; /* Large height to enable vertical scrolling */
+            border: none;
         }
     </style>
 </head>
 <body>
-    <!-- Opening Fullscreen Section -->
-    <div class="fullscreen-section">
-        <h1>
-            <span>CLIMATE</span>
-            <span>UNDER</span>
-            <span>SIEGE</span>
-        </h1>
-    </div>
-
-    <!-- Placeholder Image Section -->
+    <!-- First Section -->
     <div class="section">
-        <div class="image-frame">
-            <img src="assets/images/Ndgain.png" alt="CVI">
-        </div>
         <div class="text-box" id="text1">
             <h2>CVI</h2>
             <p>Placeholder text for CVI. This is where you explain the significance of the CVI data represented in this image.</p>
         </div>
     </div>
 
-    <!-- Second Section with Map -->
+    <!-- Second Section with Scrollable Map -->
     <div class="section">
-        <div class="map-frame">
-            <div class="flourish-embed flourish-map" data-src="visualisation/21185716">
-                <script src="https://public.flourish.studio/resources/embed.js"></script>
-                <noscript>
-                    <img src="https://public.flourish.studio/visualisation/21185716/thumbnail" width="100%" alt="map visualization" />
-                </noscript>
-            </div>
+        <div class="map-container">
+            <iframe
+                src="https://public.flourish.studio/visualisation/21185716"
+                title="Map Visualization"
+                scrolling="no"
+            ></iframe>
         </div>
         <div class="text-box" id="text2">
             <h2>Conflict</h2>
@@ -165,25 +92,11 @@
         </div>
     </div>
 
-    <!-- Third Section -->
+    <!-- Other Sections -->
     <div class="section">
-        <div class="image-frame">
-            <img src="assets/images/conflict_acled.png" alt="Conflict">
-        </div>
         <div class="text-box" id="text3">
             <h2>Conflict Details</h2>
             <p>Additional details about the conflict and its relationship to climate change.</p>
-        </div>
-    </div>
-
-    <!-- Fourth Section -->
-    <div class="section">
-        <div class="image-frame">
-            <img src="assets/images/left-image.png" alt="Visual">
-        </div>
-        <div class="text-box" id="text4">
-            <h2>Visual Summary</h2>
-            <p>Summarizing insights and presenting key takeaways using imagery and data visualization.</p>
         </div>
     </div>
 
