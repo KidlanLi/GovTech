@@ -21,17 +21,46 @@
             align-items: center;
         }
 
-        .fullscreen-map {
+        .text-box {
+            position: absolute;
+            bottom: 5%;
+            left: 5%;
+            max-width: 300px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 1rem;
+            border-radius: 8px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+
+        .text-box h2 {
+            margin: 0 0 0.5rem 0;
+            color: #00D1FF;
+        }
+
+        .text-box p {
+            margin: 0;
+            line-height: 1.5;
+            font-size: 0.9rem;
+        }
+
+        .text-box.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .map-container {
             position: relative;
             width: 100%;
             height: 100%;
             overflow: hidden;
         }
 
-        .fullscreen-map iframe {
+        .map-container .flourish-embed {
             width: 100%;
             height: 100%;
-            border: none;
         }
     </style>
 </head>
@@ -44,12 +73,20 @@
         </div>
     </div>
 
-    <!-- Second Section with Fullscreen Map -->
-    <div class="fullscreen-map">
-        <iframe
-            src="https://public.flourish.studio/visualisation/21185716"
-            title="Map Visualization"
-        ></iframe>
+    <!-- Second Section with Flourish Map -->
+    <div class="section">
+        <div class="map-container">
+            <div class="flourish-embed flourish-map" data-src="visualisation/21185716">
+                <script src="https://public.flourish.studio/resources/embed.js"></script>
+                <noscript>
+                    <img src="https://public.flourish.studio/visualisation/21185716/thumbnail" width="100%" alt="map visualization" />
+                </noscript>
+            </div>
+        </div>
+        <div class="text-box" id="text2">
+            <h2>Conflict</h2>
+            <p>Placeholder text for Conflict. This is where you describe the conflict data and its relevance to the topic.</p>
+        </div>
     </div>
 
     <!-- Other Sections -->
