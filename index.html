@@ -24,10 +24,10 @@
         .text-box {
             position: absolute;
             top: 5%;
-            left: 5%;
+            right: 5%; /* Positioned to the top-right corner */
             max-width: 600px; /* Double the original width */
             background: transparent; /* Transparent background */
-            color: white;
+            color: black; /* Black text */
             padding: 1rem;
             border-radius: 8px;
             opacity: 0;
@@ -37,13 +37,14 @@
 
         .text-box h2 {
             margin: 0 0 0.5rem 0;
-            color: #00D1FF;
+            color: black; /* Black text for the header */
+            font-size: 2rem; /* Larger font size */
         }
 
         .text-box p {
             margin: 0;
             line-height: 1.5;
-            font-size: 1rem; /* Slightly larger font for readability */
+            font-size: 1.2rem; /* Larger font size for readability */
         }
 
         .text-box.show {
