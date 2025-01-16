@@ -12,6 +12,56 @@
             overflow-x: hidden;
         }
 
+        /* Fullscreen Intro Section */
+        .fullscreen-section {
+            position: relative;
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: url('assets/images/back_draft_1.png') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+        }
+
+        .fullscreen-section h1 {
+            font-size: 5rem;
+            margin: 0;
+            line-height: 1.2;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7), 0px 0px 20px rgba(255, 255, 255, 0.9);
+        }
+
+        .fullscreen-section h1 span {
+            display: block;
+            animation: fade-in 2s ease-in-out forwards;
+        }
+
+        .fullscreen-section h1 span:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .fullscreen-section h1 span:nth-child(2) {
+            animation-delay: 0.5s;
+        }
+
+        .fullscreen-section h1 span:nth-child(3) {
+            animation-delay: 1s;
+        }
+
+        @keyframes fade-in {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
         /* Section Styles */
         .section {
             position: relative;
@@ -72,8 +122,9 @@
         .map-container {
             position: relative;
             width: 100%;
-            height: 120%; /* Increased height for complete map display */
+            height: 120%;
             overflow: hidden;
+            border: none; /* Remove border/line between sections */
         }
 
         .map-container .flourish-embed {
@@ -123,17 +174,6 @@
             position: relative;
         }
 
-        .split-section::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 50%;
-            width: 2px;
-            background: #ddd;
-            transform: translateX(-50%);
-        }
-
         .split-section .split {
             flex: 1;
             padding: 1rem;
@@ -162,7 +202,16 @@
     </style>
 </head>
 <body>
-    <!-- First Section -->
+    <!-- First Section: Fullscreen Intro -->
+    <div class="fullscreen-section">
+        <h1>
+            <span>CLIMATE</span>
+            <span>UNDER</span>
+            <span>SIEGE</span>
+        </h1>
+    </div>
+
+    <!-- Second Section: CVI -->
     <div class="section">
         <div class="image-frame">
             <img src="assets/images/Ndgain.png" alt="CVI">
@@ -173,7 +222,7 @@
         </div>
     </div>
 
-    <!-- Second Section with Conflict Map -->
+    <!-- Third Section: Conflict Map -->
     <div class="section">
         <div class="map-container">
             <div class="flourish-embed flourish-map" data-src="visualisation/21185716">
@@ -189,35 +238,17 @@
         </div>
     </div>
 
-    <!-- Third Section -->
-    <div class="section">
-        <div class="split-section">
-            <div class="split" id="split-left">
-                <h2>Left Title</h2>
-                <p>Placeholder text for the left section. Add more detailed content here, explaining the data or images shown.</p>
-                <img src="assets/images/left-image.png" alt="Left Content">
-            </div>
-            <div class="split" id="split-right">
-                <h2>Right Title</h2>
-                <p>Placeholder text for the right section. Add more detailed content here, explaining the data or images shown.</p>
-                <img src="assets/images/right-image.png" alt="Right Content">
-            </div>
-        </div>
-    </div>
-
     <!-- Fourth Section -->
-    <div class="section">
-        <div class="split-section">
-            <div class="split" id="split-left-2">
-                <h2>Left Title 2</h2>
-                <p>Placeholder text for the left section in the fourth page. Add more details here about the data or visuals presented.</p>
-                <img src="assets/images/left-image-2.png" alt="Left Content 2">
-            </div>
-            <div class="split" id="split-right-2">
-                <h2>Right Title 2</h2>
-                <p>Placeholder text for the right section in the fourth page. Add more details here about the data or visuals presented.</p>
-                <img src="assets/images/right-image-2.png" alt="Right Content 2">
-            </div>
+    <div class="split-section">
+        <div class="split" id="split-left">
+            <h2>Left Title</h2>
+            <p>Placeholder text for the left section. Add more detailed content here, explaining the data or images shown.</p>
+            <img src="assets/images/left-image.png" alt="Left Content">
+        </div>
+        <div class="split" id="split-right">
+            <h2>Right Title</h2>
+            <p>Placeholder text for the right section. Add more detailed content here, explaining the data or images shown.</p>
+            <img src="assets/images/right-image.png" alt="Right Content">
         </div>
     </div>
 
