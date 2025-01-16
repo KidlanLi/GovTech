@@ -62,36 +62,6 @@
             }
         }
 
-        /* Image Placeholder Section */
-        .image-placeholder-section {
-            position: relative;
-            height: 100vh;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #f4f4f4;
-        }
-
-        .image-placeholder {
-            position: relative;
-            width: 60%;
-            max-width: 800px;
-            height: 60%;
-            background-color: white;
-            border: 10px solid #ddd;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #666;
-            border-radius: 10px;
-        }
-
-        /* Existing Sections */
         .section {
             position: relative;
             height: 100vh;
@@ -99,23 +69,6 @@
             display: flex;
             justify-content: center;
             align-items: center;
-        }
-
-        .section .image-frame {
-            position: relative;
-            max-width: 90%;
-            max-height: 90%;
-            border: 10px solid white;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-            border-radius: 15px;
-            overflow: hidden;
-        }
-
-        .section img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
         }
 
         .text-box {
@@ -148,51 +101,30 @@
             transform: translateY(0);
         }
 
-        .split-section {
-            display: flex;
-            flex-direction: row;
-            width: 100%;
-            height: 100vh;
-            align-items: center;
-            padding: 2rem;
+        .image-frame {
             position: relative;
+            max-width: 90%;
+            max-height: 90%;
+            border: 10px solid white;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            border-radius: 15px;
+            overflow: hidden;
         }
 
-        .split-section::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 50%;
-            width: 2px;
-            background: #ddd;
-            transform: translateX(-50%);
+        .image-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
-        .split-section .split {
-            flex: 1;
-            padding: 1rem;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 1s ease, transform 1s ease;
-        }
-
-        .split-section .split h2 {
-            font-size: 1.5rem;
-            color: #007BFF;
-            margin-bottom: 1rem;
-        }
-
-        .split-section .split img {
-            max-width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-            margin-top: 1rem;
-        }
-
-        .split-section .split.show {
-            opacity: 1;
-            transform: translateY(0);
+        .map-frame {
+            position: relative;
+            width: 90%;
+            height: 90%;
+            border: 10px solid white;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            border-radius: 15px;
+            overflow: hidden;
         }
     </style>
 </head>
@@ -207,13 +139,6 @@
     </div>
 
     <!-- Placeholder Image Section -->
-    <div class="image-placeholder-section">
-        <div class="image-placeholder">
-            Placeholder for Upcoming Image
-        </div>
-    </div>
-
-    <!-- First Section -->
     <div class="section">
         <div class="image-frame">
             <img src="assets/images/Ndgain.png" alt="CVI">
@@ -224,10 +149,15 @@
         </div>
     </div>
 
-    <!-- Second Section -->
+    <!-- Second Section with Map -->
     <div class="section">
-        <div class="image-frame">
-            <img src="assets/images/conflict_acled.png" alt="Conflict">
+        <div class="map-frame">
+            <div class="flourish-embed flourish-map" data-src="visualisation/21185716">
+                <script src="https://public.flourish.studio/resources/embed.js"></script>
+                <noscript>
+                    <img src="https://public.flourish.studio/visualisation/21185716/thumbnail" width="100%" alt="map visualization" />
+                </noscript>
+            </div>
         </div>
         <div class="text-box" id="text2">
             <h2>Conflict</h2>
@@ -236,56 +166,37 @@
     </div>
 
     <!-- Third Section -->
-    <div class="split-section">
-        <div class="split" id="split-left">
-            <h2>Left Title</h2>
-            <p>Placeholder text for the left section. Add more detailed content here, explaining the data or images shown.</p>
-            <img src="assets/images/left-image.png" alt="Left Content">
+    <div class="section">
+        <div class="image-frame">
+            <img src="assets/images/conflict_acled.png" alt="Conflict">
         </div>
-        <div class="split" id="split-right">
-            <h2>Right Title</h2>
-            <p>Placeholder text for the right section. Add more detailed content here, explaining the data or images shown.</p>
-            <img src="assets/images/right-image.png" alt="Right Content">
+        <div class="text-box" id="text3">
+            <h2>Conflict Details</h2>
+            <p>Additional details about the conflict and its relationship to climate change.</p>
         </div>
     </div>
 
     <!-- Fourth Section -->
-    <div class="split-section">
-        <div class="split" id="split-left-2">
-            <h2>Left Title 2</h2>
-            <p>Placeholder text for the left section in the fourth page. Add more details here about the data or visuals presented.</p>
-            <img src="assets/images/left-image-2.png" alt="Left Content 2">
+    <div class="section">
+        <div class="image-frame">
+            <img src="assets/images/left-image.png" alt="Visual">
         </div>
-        <div class="split" id="split-right-2">
-            <h2>Right Title 2</h2>
-            <p>Placeholder text for the right section in the fourth page. Add more details here about the data or visuals presented.</p>
-            <img src="assets/images/right-image-2.png" alt="Right Content 2">
+        <div class="text-box" id="text4">
+            <h2>Visual Summary</h2>
+            <p>Summarizing insights and presenting key takeaways using imagery and data visualization.</p>
         </div>
     </div>
 
     <script>
-        const sections = document.querySelectorAll('.section');
         const textBoxes = document.querySelectorAll('.text-box');
-        const splits = document.querySelectorAll('.split');
 
         window.addEventListener('scroll', () => {
-            sections.forEach((section, index) => {
-                const rect = section.getBoundingClientRect();
-                const textBox = textBoxes[index];
-
+            textBoxes.forEach((textBox) => {
+                const rect = textBox.getBoundingClientRect();
                 if (rect.top < window.innerHeight * 0.8 && rect.bottom > window.innerHeight * 0.2) {
                     textBox.classList.add('show');
                 } else {
                     textBox.classList.remove('show');
-                }
-            });
-
-            splits.forEach((split) => {
-                const rect = split.getBoundingClientRect();
-                if (rect.top < window.innerHeight * 0.8 && rect.bottom > window.innerHeight * 0.2) {
-                    split.classList.add('show');
-                } else {
-                    split.classList.remove('show');
                 }
             });
         });
