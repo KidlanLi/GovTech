@@ -129,38 +129,27 @@
             height: 100%;
         }
 
-        .map-text-box {
-            position: absolute;
-            top: 30%; /* Adjusted for vertical centering */
-            left: 50%;
-            transform: translate(-50%, -50%);
-            max-width: 800px;
-            background: rgba(255, 255, 255, 0.8);
-            color: black;
-            padding: 2rem;
-            border-radius: 8px;
-            opacity: 0;
-            transform: translate(-50%, -50%) scale(0.8);
-            transition: opacity 1s ease, transform 1s ease;
+        .map-title-box {
+            position: relative;
+            width: 100%;
             text-align: center;
-            font-size: 1.5rem; /* Increased font size */
-            line-height: 1.6;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 1rem 2rem;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+            margin-bottom: -30px; /* Negative margin to reduce gap */
         }
 
-        .map-text-box h2 {
-            margin: 0 0 1rem 0;
-            color: black;
-            font-size: 2.5rem; /* Enlarged title */
-        }
-
-        .map-text-box p {
+        .map-title-box h2 {
             margin: 0;
-            font-size: 1.5rem;
+            font-size: 2rem;
+            color: black;
         }
 
-        .map-text-box.show {
-            opacity: 1;
-            transform: translate(-50%, -50%) scale(1);
+        .map-title-box p {
+            margin: 0.5rem 0 0;
+            font-size: 1rem;
+            line-height: 1.5;
+            color: #555;
         }
 
         /* Split Section Styles */
@@ -224,6 +213,10 @@
 
     <!-- Third Section: Conflict Map -->
     <div class="section">
+        <div class="map-title-box">
+            <h2>Conflict data for the year 2021</h2>
+            <p>ACLED (Armed Conflict Location & Event Data) is a conflict data collection initiative. For the purpose of our project, we understand conflict as the combination of events (such as protests, attacks, bombings) and fatalities.</p>
+        </div>
         <div class="map-container">
             <div class="flourish-embed flourish-map" data-src="visualisation/21187311">
                 <script src="https://public.flourish.studio/resources/embed.js"></script>
@@ -231,10 +224,6 @@
                     <img src="https://public.flourish.studio/visualisation/21187311/thumbnail" width="100%" alt="map visualization" />
                 </noscript>
             </div>
-        </div>
-        <div class="map-text-box" id="text2">
-            <h2>Conflict data for the year 2021 </h2>
-            <p>ACLED (Armed Conflict Location & Event Data) is a conflict data collection initiative. For the purpose of our project, we understand conflict as the combination of events (such as protests, attacks, bombings) and fatalities.</p>
         </div>
     </div>
 
@@ -267,7 +256,7 @@
     </div>
 
     <script>
-        const sections = document.querySelectorAll('.section, .map-text-box, .split, .small-text-box');
+        const sections = document.querySelectorAll('.section, .split, .small-text-box');
 
         window.addEventListener('scroll', () => {
             sections.forEach((element) => {
