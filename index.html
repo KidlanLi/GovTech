@@ -238,7 +238,7 @@
         </div>
     </div>
 
-    <!-- Fourth Section -->
+    <!-- Third Section -->
     <div class="split-section">
         <div class="split" id="split-left">
             <h2>Left Title</h2>
@@ -252,16 +252,43 @@
         </div>
     </div>
 
+    <!-- Fourth Section -->
+    <div class="split-section">
+        <div class="split" id="split-left-2">
+            <h2>Left Title 2</h2>
+            <p>Placeholder text for the left section in the fourth page. Add more details here about the data or visuals presented.</p>
+            <img src="assets/images/left-image-2.png" alt="Left Content 2">
+        </div>
+        <div class="split" id="split-right-2">
+            <h2>Right Title 2</h2>
+            <p>Placeholder text for the right section in the fourth page. Add more details here about the data or visuals presented.</p>
+            <img src="assets/images/right-image-2.png" alt="Right Content 2">
+        </div>
+    </div>
+
     <script>
-        const textBoxes = document.querySelectorAll('.text-box, .map-text-box, .split');
+        const sections = document.querySelectorAll('.section');
+        const textBoxes = document.querySelectorAll('.text-box');
+        const splits = document.querySelectorAll('.split');
 
         window.addEventListener('scroll', () => {
-            textBoxes.forEach((textBox) => {
-                const rect = textBox.getBoundingClientRect();
+            sections.forEach((section, index) => {
+                const rect = section.getBoundingClientRect();
+                const textBox = textBoxes[index];
+
                 if (rect.top < window.innerHeight * 0.8 && rect.bottom > window.innerHeight * 0.2) {
                     textBox.classList.add('show');
                 } else {
                     textBox.classList.remove('show');
+                }
+            });
+
+            splits.forEach((split) => {
+                const rect = split.getBoundingClientRect();
+                if (rect.top < window.innerHeight * 0.8 && rect.bottom > window.innerHeight * 0.2) {
+                    split.classList.add('show');
+                } else {
+                    split.classList.remove('show');
                 }
             });
         });
