@@ -62,6 +62,30 @@
             object-fit: cover;
         }
 
+        /* Small Text Box for CVI */
+        .small-text-box {
+            position: absolute;
+            top: 5%;
+            left: 5%;
+            max-width: 200px;
+            background: rgba(255, 255, 255, 0.8);
+            color: black;
+            padding: 0.8rem;
+            border-radius: 8px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+            font-size: 0.9rem;
+            line-height: 1.4;
+            text-align: left;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+
+        .small-text-box.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
         /* Map Section Specific Styles */
         .map-container {
             position: relative;
@@ -159,9 +183,9 @@
         <div class="image-frame">
             <img src="assets/images/Ndgain.png" alt="CVI">
         </div>
-        <div class="text-box" id="text1">
+        <div class="small-text-box" id="small-text-cvi">
             <h2>CVI</h2>
-            <p>Placeholder text for CVI. This is where you explain the significance of the CVI data represented in this image.</p>
+            <p>This is a small description box for CVI, providing additional information about the image.</p>
         </div>
     </div>
 
@@ -210,7 +234,7 @@
     </div>
 
     <script>
-        const sections = document.querySelectorAll('.section, .map-text-box, .split');
+        const sections = document.querySelectorAll('.section, .map-text-box, .split, .small-text-box');
 
         window.addEventListener('scroll', () => {
             sections.forEach((element) => {
