@@ -12,86 +12,7 @@
             overflow-x: hidden;
         }
 
-        /* Fullscreen Intro Section */
-        .fullscreen-section {
-            position: relative;
-            height: 100vh;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: url('assets/images/back_draft_1.png') no-repeat center center/cover;
-            color: white;
-            text-align: center;
-        }
-
-        .fullscreen-section h1 {
-            font-size: 5rem;
-            margin: 0;
-            line-height: 1.2;
-            font-weight: bold;
-            text-transform: uppercase;
-            text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7), 0px 0px 20px rgba(255, 255, 255, 0.9);
-        }
-
-        .fullscreen-section h1 span {
-            display: block;
-            animation: fade-in 2s ease-in-out forwards;
-        }
-
-        .fullscreen-section h1 span:nth-child(1) {
-            animation-delay: 0s;
-        }
-
-        .fullscreen-section h1 span:nth-child(2) {
-            animation-delay: 0.5s;
-        }
-
-        .fullscreen-section h1 span:nth-child(3) {
-            animation-delay: 1s;
-        }
-
-        @keyframes fade-in {
-            0% {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Image Placeholder Section */
-        .image-placeholder-section {
-            position: relative;
-            height: 100vh;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #f4f4f4;
-        }
-
-        .image-placeholder {
-            position: relative;
-            width: 60%;
-            max-width: 800px;
-            height: 60%;
-            background-color: white;
-            border: 10px solid #ddd;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #666;
-            border-radius: 10px;
-        }
-
-        /* Existing Sections */
+        /* Section Styles */
         .section {
             position: relative;
             height: 100vh;
@@ -101,7 +22,7 @@
             align-items: center;
         }
 
-        .section .image-frame {
+        .image-frame {
             position: relative;
             max-width: 90%;
             max-height: 90%;
@@ -111,11 +32,10 @@
             overflow: hidden;
         }
 
-        .section img {
+        .image-frame img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            display: block;
         }
 
         .text-box {
@@ -148,6 +68,51 @@
             transform: translateY(0);
         }
 
+        /* Map Section Specific Styles */
+        .map-container {
+            position: relative;
+            width: 100%;
+            height: 120%; /* Increased height for complete map display */
+            overflow: hidden;
+        }
+
+        .map-container .flourish-embed {
+            width: 100%;
+            height: 100%;
+        }
+
+        .map-text-box {
+            position: absolute;
+            top: 5%;
+            right: 5%;
+            max-width: 600px;
+            background: transparent;
+            color: black;
+            padding: 1rem;
+            border-radius: 8px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+
+        .map-text-box h2 {
+            margin: 0 0 0.5rem 0;
+            color: black;
+            font-size: 2rem;
+        }
+
+        .map-text-box p {
+            margin: 0;
+            line-height: 1.5;
+            font-size: 1.2rem;
+        }
+
+        .map-text-box.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Split Section Styles */
         .split-section {
             display: flex;
             flex-direction: row;
@@ -197,22 +162,6 @@
     </style>
 </head>
 <body>
-    <!-- Opening Fullscreen Section -->
-    <div class="fullscreen-section">
-        <h1>
-            <span>CLIMATE</span>
-            <span>UNDER</span>
-            <span>SIEGE</span>
-        </h1>
-    </div>
-
-    <!-- Placeholder Image Section -->
-    <div class="image-placeholder-section">
-        <div class="image-placeholder">
-            Placeholder for Upcoming Image
-        </div>
-    </div>
-
     <!-- First Section -->
     <div class="section">
         <div class="image-frame">
@@ -224,7 +173,7 @@
         </div>
     </div>
 
-    <!-- Second Section with Flourish Map -->
+    <!-- Second Section with Conflict Map -->
     <div class="section">
         <div class="map-container">
             <div class="flourish-embed flourish-map" data-src="visualisation/21185716">
@@ -240,62 +189,51 @@
         </div>
     </div>
 
-
     <!-- Third Section -->
-    <div class="split-section">
-        <div class="split" id="split-left">
-            <h2>Left Title</h2>
-            <p>Placeholder text for the left section. Add more detailed content here, explaining the data or images shown.</p>
-            <img src="assets/images/left-image.png" alt="Left Content">
-        </div>
-        <div class="split" id="split-right">
-            <h2>Right Title</h2>
-            <p>Placeholder text for the right section. Add more detailed content here, explaining the data or images shown.</p>
-            <img src="assets/images/right-image.png" alt="Right Content">
+    <div class="section">
+        <div class="split-section">
+            <div class="split" id="split-left">
+                <h2>Left Title</h2>
+                <p>Placeholder text for the left section. Add more detailed content here, explaining the data or images shown.</p>
+                <img src="assets/images/left-image.png" alt="Left Content">
+            </div>
+            <div class="split" id="split-right">
+                <h2>Right Title</h2>
+                <p>Placeholder text for the right section. Add more detailed content here, explaining the data or images shown.</p>
+                <img src="assets/images/right-image.png" alt="Right Content">
+            </div>
         </div>
     </div>
 
     <!-- Fourth Section -->
-    <div class="split-section">
-        <div class="split" id="split-left-2">
-            <h2>Left Title 2</h2>
-            <p>Placeholder text for the left section in the fourth page. Add more details here about the data or visuals presented.</p>
-            <img src="assets/images/left-image-2.png" alt="Left Content 2">
-        </div>
-        <div class="split" id="split-right-2">
-            <h2>Right Title 2</h2>
-            <p>Placeholder text for the right section in the fourth page. Add more details here about the data or visuals presented.</p>
-            <img src="assets/images/right-image-2.png" alt="Right Content 2">
+    <div class="section">
+        <div class="split-section">
+            <div class="split" id="split-left-2">
+                <h2>Left Title 2</h2>
+                <p>Placeholder text for the left section in the fourth page. Add more details here about the data or visuals presented.</p>
+                <img src="assets/images/left-image-2.png" alt="Left Content 2">
+            </div>
+            <div class="split" id="split-right-2">
+                <h2>Right Title 2</h2>
+                <p>Placeholder text for the right section in the fourth page. Add more details here about the data or visuals presented.</p>
+                <img src="assets/images/right-image-2.png" alt="Right Content 2">
+            </div>
         </div>
     </div>
 
     <script>
-        const sections = document.querySelectorAll('.section');
-        const textBoxes = document.querySelectorAll('.text-box');
-        const splits = document.querySelectorAll('.split');
+        const textBoxes = document.querySelectorAll('.text-box, .map-text-box, .split');
 
         window.addEventListener('scroll', () => {
-            sections.forEach((section, index) => {
-                const rect = section.getBoundingClientRect();
-                const textBox = textBoxes[index];
-
+            textBoxes.forEach((textBox) => {
+                const rect = textBox.getBoundingClientRect();
                 if (rect.top < window.innerHeight * 0.8 && rect.bottom > window.innerHeight * 0.2) {
                     textBox.classList.add('show');
                 } else {
                     textBox.classList.remove('show');
                 }
             });
-
-            splits.forEach((split) => {
-                const rect = split.getBoundingClientRect();
-                if (rect.top < window.innerHeight * 0.8 && rect.bottom > window.innerHeight * 0.2) {
-                    split.classList.add('show');
-                } else {
-                    split.classList.remove('show');
-                }
-            });
         });
     </script>
 </body>
 </html>
-
