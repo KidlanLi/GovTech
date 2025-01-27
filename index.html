@@ -291,17 +291,7 @@
     </div>
 
 
-    <!-- Interactive Map Notification -->
-    <div id="interactive-map-popup" style="position: fixed; top: 20px; left: 50%; transform: translateX(-50%); background: rgba(0, 0, 0, 0.8); color: white; padding: 15px 25px; border-radius: 8px; font-size: 1rem; z-index: 1000; text-align: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
-        All of the maps are interactive, click and explore!
-        <button onclick="closePopup()" style="margin-left: 15px; background: #ff6f61; color: white; border: none; padding: 5px 10px; border-radius: 5px; cursor: pointer;">Got it</button>
-    </div>
 
-    <script>
-        function closePopup() {
-            document.getElementById('interactive-map-popup').style.display = 'none';
-        }
-    </script>
 
     <!-- Slide 1 Section -->
     <div class="fullscreen-section" style="position: relative; margin-bottom: 50px;">
@@ -334,6 +324,17 @@
     <!-- Split Section -->
 
     <div class="row p-3">
+            <!-- Interactive Map Notification -->
+    <div class="alert alert-info alert-dismissible">
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        <strong>All of the maps are interactive,</strong> click and explore!
+    </div>
+
+    <script>
+        function closePopup() {
+            document.getElementById('interactive-map-popup').style.display = 'none';
+        }
+    </script>
         <div class="col-sm-6">
             <h1>What is climate vulnerability?</h1>
             <p> Notre Dame University created a global index to measure vulnerability to climate change. They measure this through indicators such as water, food, infrastructure, ecosystem services, human habitat and health. A low index indicates high vulnerabillity</p>
